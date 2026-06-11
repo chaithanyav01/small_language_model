@@ -226,20 +226,3 @@ def generate_text(
 
     return enc.decode(output[0].tolist())
 
-
-# -----------------------
-# Interactive Loop
-# -----------------------
-while True:
-    prompt = input("\nPrompt: ")
-
-    if prompt.lower() in ["exit", "quit"]:
-        break
-
-    generated = generate_text(
-        prompt,
-        max_new_tokens=100
-    )
-
-    print("\nGenerated Text:\n")
-    print(generated)
